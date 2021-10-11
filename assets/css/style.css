@@ -22,17 +22,17 @@ body {
 
 .font-h1 {
 	font-family: "Open Sans Bold";
-	font-size: 72px;
+	font-size: calc(40px + 2vw);
 }
 
 .font-h2 {
 	font-family: "Open Sans Bold";
-	font-size: 48px;
+	font-size: calc(20px + 2vw);
 }
 
 .font-h3 {
 	font-family: "Open Sans Bold";
-	font-size: 24px;
+	font-size: calc(10px + 1vw);
 }
 
 .font-subtext {
@@ -54,6 +54,8 @@ body {
 
 body {
 	color: white;
+	background-color: #9C835F;
+
 	letter-spacing: 1.5px;
 }
 
@@ -62,6 +64,7 @@ section {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	overflow: hidden;
 }
 
 a {
@@ -84,11 +87,18 @@ a:hover {
 
 .orange-button:hover {
 	background-color: rgba(247, 176, 58, 0.8);
+	color: black !important;
 }
 
 .gray-color {
 	color: #777;
 }
+
+.black-title {
+	color: black;
+}
+
+
 
 /* NAVBAR */
 
@@ -101,7 +111,7 @@ nav {
 }
 
 .navbar {
-	padding: 20px 70px;
+	padding: 20px 50px;
 }
 
 .navbar > div > a {
@@ -278,4 +288,45 @@ table {
 
 .footer-bottom {
 	padding: 0 100px 30px 100px;
+}
+
+
+
+/* SUIT GAME */
+
+.back-img {
+	width: 25px;
+}
+
+.logo-img {
+	width: 50px;
+}
+
+.suit-img > img {
+	width: calc(20px + 8vw);
+	margin-top: 30px;
+}
+
+.styling-info {
+	background-color: #4C9654;
+	color: white !important;
+	padding: 50px;
+	font-size: calc(20px + 2vw) !important;
+}
+
+.info {
+	color: red;
+	font-size: calc(40px + 2vw);
+}
+
+#player > img:active {
+	background-color: #C4C4C4;
+}
+
+.yang-dipilih {
+	background-color: #C4C4C4;
+}
+
+.refresh {
+	width: 50px;
 }

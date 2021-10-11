@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<title>Code Challenge | Chapter 3</title>
+	<title>Code Challenge | Landing Page</title>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	      	<span class="navbar-toggler-icon"></span>
 	    </button>
-		<div class="collapse navbar-collapse font-subtext" id="navbarText">
+		<div class="collapse navbar-collapse text-center font-subtext" id="navbarText">
   			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		        <li class="nav-item">
 		          	<a class="nav-link" href="#">HOME</a>
@@ -49,7 +49,7 @@
 	<div class="container position-absolute top-50 start-50 translate-middle text-center">
 		<h1 class="font-h1">PLAY TRADITIONAL GAME</h1><br>
 		<p>Experience new traditional game play</p><br>
-		<button class="btn font-button orange-button">PLAY NOW</button>
+		<a href="suit-game.html" class="btn font-button orange-button">TRIAL</a>
 	</div>
 	<div class="container position-absolute bottom-0 start-50 translate-middle-x text-center">
 		<a class="the-story" href="#gameplayOptions">
@@ -60,14 +60,14 @@
 </section>
 
 <!-- GAMEPLAY OPTIONS -->
-<section class="bg-the-games d-flex align-items-center" id="gameplayOptions">
+<section class="bg-the-games d-flex justify-content-center align-items-center" id="gameplayOptions">
 	<div class="container">
 		<div class="row">
-			<div class="col col-lg-4">
+			<div class="col-lg-4">
 				<p>What's so special?</p>
-				<h2 class="font-h2">THE GAMES</h2>
+				<h2 class="font-h2 mb-5">THE GAMES</h2>
 			</div>
-			<div class="col col-lg-8 carousel slide" id="carouselExampleIndicators" data-bs-ride="carousel">
+			<div class="col-lg-8 carousel slide" id="carouselExampleIndicators" data-bs-ride="carousel">
 				<div class="carousel-indicators">
 				    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
 				    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="rounded-circle" aria-label="Slide 2"></button>
@@ -109,7 +109,7 @@
 <section class="bg-features d-flex align-items-center" id="gameFeature">
 	<div class="container">
 		<div class="row">
-			<div class="col offset-lg-7">
+			<div class="offset-md-7">
 				<p>What's so special?</p>
 				<h2 class="font-h2">FEATURES</h2>
 				<br>
@@ -152,7 +152,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col col-lg-6">
+			<div class="col-lg-6">
 				<h2 class="font-h2">SYSTEM<br>REQUIREMENTS</h2>
 				<table class="table table-bordered">
 					<tr>
@@ -191,12 +191,13 @@
 <section class="bg-top-scores d-flex align-items-center" id="topScore">
 	<div class="container">
 		<div class="row d-flex align-items-center justify-content-between">
-			<div class="col col-lg-4">
+			<div class="col-lg-4">
 				<h2 class="font-h2">TOP SCORES</h2><br>
 				<p class="font-subtext">This top score from various games provided on this platform</p><br>
 				<button class="btn font-button orange-button">see more</button>
 			</div>
-			<div class="col offset-lg-2 col-lg-6">
+			<!-- Tampilan Layar Besar -->
+			<div class="offset-lg-2 col-lg-6 d-none d-lg-block">
 				<!-- TESTIMONI 1 -->
 				<div class="d-flex flex-row-reverse">
 					<div class="card rounded-3 w-75">
@@ -205,11 +206,11 @@
 					    		<div class="col-2">
 						    		<img src="assets/img/thumbnail1.jpg" class="rounded-circle thumb-img">
 						    	</div>
-						    	<div class="col col-lg-8">
+						    	<div class="col-8">
 							    	<span class="orange-title">Evan Lahti</span><br>
 							    	<span class="gray-color font-subtext">PC Gamer</span>
 							    </div>
-							    <div class="col col-lg-2">
+							    <div class="col-2">
 							    	<i class="fab fa-twitter gray-color"></i>
 							    </div>
 					        </div>
@@ -228,11 +229,11 @@
 					    		<div class="col-2">
 						    		<img src="assets/img/thumbnail2.jpg" class="rounded-circle thumb-img">
 						    	</div>
-						    	<div class="col col-lg-8">
+						    	<div class="col-lg-8">
 							    	<span class="orange-title">Jada Griffin</span><br>
 							    	<span class="gray-color font-subtext">Nerdreactor</span>
 							    </div>
-							    <div class="col col-lg-2">
+							    <div class="col-lg-2">
 							    	<i class="fab fa-twitter gray-color"></i>
 							    </div>
 					        </div>
@@ -251,11 +252,11 @@
 					    		<div class="col-2">
 						    		<img src="assets/img/thumbnail3.jpg" class="rounded-circle thumb-img">
 						    	</div>
-						    	<div class="col col-lg-8">
+						    	<div class="col-lg-8">
 							    	<span class="orange-title">Aaron Williams</span><br>
 							    	<span class="gray-color font-subtext">Uproxx</span>
 							    </div>
-							    <div class="col col-lg-2">
+							    <div class="col-lg-2">
 							    	<i class="fab fa-twitter gray-color"></i>
 							    </div>
 					        </div>
@@ -267,6 +268,29 @@
 					</div>
 				</div>
 			</div>
+			<!-- Tampilan Layar Kecil -->
+			<div class="col d-lg-none mt-5">
+					<div class="card rounded-3 w-100">
+					    <div class="card-body">
+					    	<div class="row">
+					    		<div class="col-sm-2">
+						    		<img src="assets/img/thumbnail1.jpg" class="rounded-circle thumb-img">
+						    	</div>
+						    	<div class="col-sm-9">
+							    	<span class="orange-title">Evan Lahti</span><br>
+							    	<span class="gray-color font-subtext">PC Gamer</span>
+							    </div>
+							    <div class="col-sm-1">
+							    	<i class="fab fa-twitter gray-color"></i>
+							    </div>
+					        </div>
+					        <div class="row">
+					        	<p class="font-subtext testimoni">"One of my gaming highlights of the year."</p>
+					        	<p class="font-xs gray-color testimoni">October 18, 2018</p>
+					        </div>
+					    </div>
+					</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -275,10 +299,10 @@
 <section class="bg-subscribe d-flex align-items-center">
 	<div class="container">
 		<div class="row d-flex align-items-center">
-			<div class="col col-lg-5">
+			<div class="col-lg-5 d-none d-lg-block">
 				<img src="assets/img/subscribe-image.jpg" class="w-75">
 			</div>
-			<div class="col col-lg-7">
+			<div class="col-lg-7">
 				<div class="row">
 					<div class="col">
 						<p>Want to stay in touch?</p>
@@ -288,11 +312,11 @@
 				</div>
 				<br><br>
 				<form class="row">
-					<div class="col">
+					<div class="col mt-2">
 					    <input type="email" class="form-control" placeholder="Your email address">
 					</div>
-					<div class="col col-auto">
-					    <button type="submit" class="btn font-button orange-button">Subscribe Now</button>
+					<div class="col-md-auto mt-2">
+					    <button type="submit" class="btn font-button orange-button w-100">Subscribe Now</button>
 					</div>
 				</form>
 			</div>
@@ -348,6 +372,7 @@
 	</div>
 </footer>
 
+<script src="assets/js/script.js"></script>
 <script src="assets/js/jquery.js"></script> 
 <script src="assets/js/popper.js"></script> 
 <script src="assets/js/bootstrap.js"></script>	

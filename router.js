@@ -15,7 +15,6 @@ router.get('/login', (req, res) => {
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
     const name = users[0].name;
-    // const user = { name, username, password };
     const matchUser = users.find(data => data.username === username);
     const matchPass = users.find(data => data.password === password);
 
@@ -23,7 +22,6 @@ router.post('/login', (req, res) => {
         res.send('Hmm ... username dan password kamu salah nih')
     } else if (matchUser) {
         if (matchPass) {
-            // users.push(user);
             console.log(`Hai, ${name}! Kamu telah berhasil login.`)
             res.redirect('/suit-game')
         } else {

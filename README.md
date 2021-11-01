@@ -3,3 +3,4 @@ Ini merupakan sebuah web statis sebagai bentuk frontend dari aplikasi game seder
 - CSS
 - Bootstrap 5
 - JavaScript
+- NodeJS

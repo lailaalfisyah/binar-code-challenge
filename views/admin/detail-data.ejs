@@ -1,0 +1,25 @@
+<%- include('../layouts/header') %> 
+
+<div class="container mt-5">
+    <div class="row d-flex justify-content-around">
+        <div class="col-lg-6">
+            <h1 class="text-center">BIODATA USER</h1><br>
+            <table class="table">
+                  <tr>
+                    <th scope="row">Username</th>
+                    <td>: <%= usergame.username %></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Full Name</th>
+                    <td>: <%= usergame.fullName %></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gender</th>
+                    <td>: <%= usergame.gender %></td>
+                  </tr>
+              </table>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/footer') %> 

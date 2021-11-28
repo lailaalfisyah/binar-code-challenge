@@ -81,6 +81,20 @@ router.get('/admin-dashboard', (req, res) => {
     })  
 })
 
+
+router.get('/biodata/:id', (req, res) => {
+    UserGame.findOne({
+        where: {id: req.params.id}
+    })
+
+    UserGameBiodata.findOne({
+        where: {id: req.params.id-6}
+    })
+    .then(usergame => {
+        res.redirect('/detail-data')
+    }) 
+})
+
 router.get('/create', (req, res) => {
     res.render('admin/tambah-data', {
         title: 'Tambah Data'
@@ -93,8 +107,59 @@ router.post('/create', (req, res) => {
     })
 
     UserGameBiodata.create({
+        // userID: req.params.userID,
         fullName: req.body.fullName,
         gender: req.body.gender
+    })
+    .then(usergame => {
+        res.redirect('/admin-dashboard')
+    })
+})
+
+router.get('/edit-data', (req, res) => {
+    res.render('admin/edit-data')
+})
+
+router.get('/update/:id', (req, res) => {
+    UserGame.findOne({
+        where: {id: req.params.id}
+    })
+
+    UserGameBiodata.findOne({
+        where: {id: req.params.id-6}
+    })
+    .then(usergame => {
+        res.redirect('/edit-data', {
+            title: 'Edit Data User'
+        })
+    })
+})
+
+router.post('/update/:id', (req, res) => {
+    UserGame.update({
+        username: req.body.username
+    }, {
+        where: {id: req.params.id}
+    })
+
+    UserGameBiodata.update({
+        fullName: req.body.fullName,
+        gender: req.body.gender
+    }, {
+        where: {id: req.params.id-6}
+    })
+    .then(usergame => {
+        res.redirect('admin-dashboard')
+    })
+})
+
+router.get('/delete/:id', (req, res) => {
+    UserGame.destroy({
+        where: {id: req.params.id}
+    })
+
+    UserGameBiodata.destroy({
+        where: {id: req.params.id-6}
     })
     .then(usergame => {
         res.redirect('/admin-dashboard')

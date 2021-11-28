@@ -3,23 +3,23 @@
 <div class="container mt-5">
     <div class="row d-flex justify-content-around">
         <div class="col-lg-6">
-            <h1 class="text-center">FORM TAMBAH DATA USER</h1><br>
-            <form method="POST" action="/create">
+            <h1 class="text-center">FORM EDIT DATA USER</h1><br>
+            <form method="POST" action="/update/<%= usergame.id %> ">
                 <!-- <div class="mb-3">
                     <label for="userID" class="form-label">userID from UserGame</label>
                     <input type="text" class="form-control" id="userID" name="userID">
                 </div> -->
                 <div class="mb-3">
                   <label for="username" class="form-label">Username</label>
-                  <input type="text" class="form-control" id="username" name="username">
+                  <input type="text" class="form-control" id="username" name="username" value="<%= usergame.username %>">
                 </div>
                 <div class="mb-3">
                     <label for="fullName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="fullName" name="fullName">
+                    <input type="text" class="form-control" id="fullName" name="fullName" value="<%= usergame.fullName %>">
                 </div>
                 <div class="mb-3">
                     <label for="gender" class="form-label">Gender</label>
-                    <input type="text" class="form-control" id="gender" name="gender">
+                    <input type="text" class="form-control" id="gender" name="gender" value="<%= usergame.gender %>">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

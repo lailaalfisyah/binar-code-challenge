@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 let users = require('./data/users.json');
 let admin = require('./data/admin.json');
-const { UserGame } = require('./models')
+const { UserGame, UserGameBiodata } = require('./models')
 
 router.get('/', (req, res) => {
     res.render('index', {
@@ -90,6 +90,11 @@ router.get('/create', (req, res) => {
 router.post('/create', (req, res) => {
     UserGame.create({
         username: req.body.username
+    })
+
+    UserGameBiodata.create({
+        fullName: req.body.fullName,
+        gender: req.body.gender
     })
     .then(usergame => {
         res.redirect('/admin-dashboard')

@@ -7,16 +7,20 @@
             <a href="/create" class="btn btn-primary">Tambah Data</a>
             <table class="table">
                 <thead>
-                  <tr>
+                  <tr class="text-center">
                     <th scope="col">ID</th>
                     <th scope="col">Username</th>
+                    <th scope="col" colspan="3"></th>
                   </tr>
                 </thead>                
                 <tbody>
                 <% usergames.forEach(i => { %>
-                  <tr>
+                  <tr class="text-center">
                     <td><%= i.id %></td>
                     <td><%= i.username %></td>
+                    <td><a href="/biodata">Biodata</a></td>
+                    <td><a href="/history">History</a></td>
+                    <td><a href="/delete">Delete</a></td>
                   </tr>
                 <% }) %>
                 </tbody>

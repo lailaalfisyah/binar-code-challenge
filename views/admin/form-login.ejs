@@ -1,0 +1,22 @@
+<%- include('../layouts/header') %> 
+
+<div class="container mt-5">
+    <div class="row d-flex justify-content-around">
+        <div class="col-lg-6">
+            <h1 class="text-center">FORM LOGIN ADMIN</h1><br>
+            <form method="POST" action="/admin-login">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/footer') %> 

@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 let users = require('./data/users.json');
+let admin = require('./data/admin.json');
+const { UserGame } = require('./models')
 
 router.get('/', (req, res) => {
     res.render('index', {
@@ -36,6 +38,58 @@ router.post('/login', (req, res) => {
 router.get('/suit-game', (req, res) => {
     res.render('suit-game', {
         title: 'Suit'
+    })
+})
+
+// DASHBOARD ADMIN
+
+router.get('/admin-login', (req, res) => {
+    res.render('admin/form-login', {
+        title: 'Login Admin'
+    })
+})
+
+router.post('/admin-login', (req, res) => {
+    const { username, password } = req.body;
+    const matchUserAdmin = admin.find(data => data.username === username);
+    const matchPassAdmin = admin.find(data => data.password === password);
+
+    if (!matchUserAdmin && !matchPassAdmin) {
+        res.redirect('/admin-login')
+        console.log('username dan password salah')
+        console.log(req.body)
+    } else if (matchUserAdmin) {
+        if (matchPassAdmin) {
+            res.redirect('/admin-dashboard')
+            console.log('berhasil')
+        } else {
+            res.redirect('/admin-login')
+            console.log('password salah')    
+        }
+    } else {
+        res.redirect('/admin-login')
+        console.log('username salah');
+    }  
+})
+
+router.get('/admin-dashboard', (req, res) => {
+    res.render('admin/dashboard', {
+        title: 'Dashboard Admin'
+    })
+})
+
+router.get('/create', (req, res) => {
+    res.render('admin/tambah-data', {
+        title: 'Tambah Data'
+    })
+})
+
+router.post('/create', (req, res) => {
+    UserGame.create({
+        username: req.body.username
+    })
+    .then(usergame => {
+        res.send('berhasil')
     })
 })
 

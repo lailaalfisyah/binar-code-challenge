@@ -13,6 +13,7 @@ const logger = (req, res, next) => {
 app.use(logger);
 app.use(express.json());
 app.use(express.static('public'));
+app.use(express.urlencoded());
 
 // route
 const router = require('./router');

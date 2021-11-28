@@ -73,9 +73,12 @@ router.post('/admin-login', (req, res) => {
 })
 
 router.get('/admin-dashboard', (req, res) => {
-    res.render('admin/dashboard', {
-        title: 'Dashboard Admin'
-    })
+    UserGame.findAll().then(usergames => {
+        res.render('admin/dashboard', {
+            title: 'Dashboard Admin',
+            usergames
+        })
+    })  
 })
 
 router.get('/create', (req, res) => {
@@ -89,7 +92,7 @@ router.post('/create', (req, res) => {
         username: req.body.username
     })
     .then(usergame => {
-        res.send('berhasil')
+        res.redirect('/admin-dashboard')
     })
 })
 

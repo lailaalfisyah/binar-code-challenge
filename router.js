@@ -5,13 +5,9 @@ const adm = require('./controllers/admController')
 
 // GAME
 router.get('/', game.index)
-router.get('/login', game.loginPage)
-router.post('/login', game.loginProcess)
 router.get('/suit-game', game.suitGame)
 
 // DASHBOARD ADMIN
-router.get('/admin-login', adm.loginPage)
-router.post('/admin-login', adm.loginProcess)
 router.get('/admin-dashboard', adm.mainDashboard)
 router.get('/biodata/:id', adm.biodata)
 router.get('/create', adm.createForm)
